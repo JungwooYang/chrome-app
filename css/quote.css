@@ -1,7 +1,8 @@
 .quote {
   position: fixed;
-  bottom: 0vh;
-  padding: 6vh 5vw;
+  bottom: 0;
+  height: 200px;
+  padding: 50px 5vw;
   background-color: rgba(255, 255, 255, 0.2);
   width: 100%;
   font-size: 22px;
