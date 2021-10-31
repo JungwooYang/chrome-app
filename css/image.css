@@ -14,7 +14,7 @@
 
 .img-container img:nth-child(2) {
   position: relative;
-  left: 460px;
+  left: 465px;
   bottom: 65px;
   width: 55px;
   transform: rotateY(180deg);
