@@ -1,5 +1,5 @@
-const loginForm = document.querySelector("#login-form");
-const loginInput = document.querySelector("#login-form input");
+const loginForm = document.querySelector(".login-form");
+const loginInput = document.querySelector(".login-form input");
 const greeting = document.querySelector(".greeting");
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
@@ -13,7 +13,7 @@ function onLoginSubmit(event) {
 }
 
 function paintGreetings(username) {
-    greeting.innerText = `Welcome ${username}!` + "\n Calm down here and keep carry on. \n Let me help you.";
+    greeting.innerText = `Welcome ${username}!` + "\n\n Why don't you tell me your story?";
     greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
@@ -31,6 +31,7 @@ const removeBtn = document.querySelector(".remove-storage")
 function removeStorage() {
     localStorage.removeItem(USERNAME_KEY);
     window.location.reload();
+    localStorage.clear();
 }
 
 removeBtn.addEventListener("click", removeStorage);

@@ -4,7 +4,7 @@ const quotes = [
         author: "Walt Disney",
     },
     {
-        quote: "Be who you are and say what you fell, because theose who mind don't matter and thos who matter don't mind.",
+        quote: "Be who you are and say what you fell, because those who mind don't matter and thos who matter don't mind.",
         author: "Dr.Seuss",
     },
     {
@@ -25,7 +25,7 @@ const quotes = [
     },
     {
         quote: "Two things define you: your patience when you hav nothing and your attitude when you have everything.",
-        author: "PBH Network",
+        author: "George Bernard Shaw",
     },
     {
         quote: "The primary cause of unhappiness is never the situation but your thoughts about it.",
@@ -40,7 +40,7 @@ const quotes = [
         author: "Albert Einstein",
     },
     {
-        quote: "Life is hor, break the rules, forgive quickly, kiss slowly, love truly, laugh uncontrollably, and never regret anything that made you smile.",
+        quote: "Life is short, break the rules, forgive quickly, kiss slowly, love truly, laugh uncontrollably, and never regret anything that made you smile.",
         author: "Mark Twain"
     },
     {
@@ -48,13 +48,13 @@ const quotes = [
         author: "Ralph Waldo Emerson",
     },
     {
-        quote: "Never go on trips with anyone you do ntot love.",
+        quote: "Never go on trips with anyone you don't love.",
         author: "Hemmingway",
     },
 ];
 
-const quote = document.querySelector(".quote span:first-child");
-const author = document.querySelector(".quote span:last-child");
+const quote = document.querySelector(".quote div:first-child");
+const author = document.querySelector(".quote div:last-child");
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
 quote.innerText = todaysQuote.quote;

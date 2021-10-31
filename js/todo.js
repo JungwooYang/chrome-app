@@ -16,6 +16,7 @@ function deleteToDo(event) {
     li.remove();
     toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
     saveToDos();
+    typingEffect(burnreact,newreact, beginning);
 }
 
 function paintToDo (newTodo) {
@@ -23,7 +24,7 @@ function paintToDo (newTodo) {
     li.id = newTodo.id;
     const span = document.createElement("span");
     const button = document.createElement("button");
-    button.innerText = "❌";
+    button.innerText = "🔥";
     button.addEventListener("click", deleteToDo);
     li.appendChild(span);
     li.appendChild(button);
@@ -42,6 +43,7 @@ function handleToDoSubmit (event) {
     toDos.push(newTodoObj);
     paintToDo(newTodoObj);
     saveToDos();
+    typingEffect(newreact, beginning, burnreact);
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
@@ -52,4 +54,25 @@ if (savedToDos) {
     const parsedToDos = JSON.parse(savedToDos);
     toDos = parsedToDos;
     parsedToDos.forEach(paintToDo);
+}
+
+const newreact = document.querySelector(".newreact");
+const beginning = document.querySelector(".beginning");
+const burnreact = document.querySelector(".burnreact");
+
+function typingEffect(element1, element2, element3) {
+    let text=element1.innerText;
+    element1.innerText="";
+    element1.classList.remove(HIDDEN_CLASSNAME);
+    element2.classList.add(HIDDEN_CLASSNAME);
+    element3.classList.add(HIDDEN_CLASSNAME);
+    let i = 0;
+    let timer=setInterval(function(){
+        if(i<text.length){
+            element1.append(text.charAt(i))
+            i++;
+        } else {
+            clearInterval(timer);
+        }
+    }, 60)
 }
