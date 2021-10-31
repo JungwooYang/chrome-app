@@ -1,0 +1,14 @@
+.quote {
+  position: fixed;
+  bottom: 0vh;
+  padding: 6vh 5vw;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  font-size: 22px;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.quote div:nth-child(2) {
+  margin-top: 3vh;
+}
