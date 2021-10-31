@@ -9,34 +9,52 @@
 </head>
 <body>
     <h3 class="remove-storage">reset</h2>
-    <h2 id="clock">00:00:00</h2>
-    <form class="hidden" id="login-form">
-        <span>Hi! What can i call you?</span>
+    <h2 class="clock">00:00:00</h2>
+    <form class="hidden login-form">
+        <span>Hi! What can I call you?</span>
         <br><br>
         <input required maxlength = "15" type="text" />
         <input type="submit" value="Enter" />
     </form>
     <h1 class="hidden greeting"></h1>
+    <div class="img-container">
+        <img src="./img/0.png" />
+        <img src="./img/0.png" />
+        <img src="./img/222fc65ea7720f5aff83cfaff6e3567f_large.gif" />
+        <div class="react beginning">...</div>
+        <div class="react hidden newreact">Intersting..</div>
+        <div class="react hidden burnreact">You burnt it!</div>
+    </div>
+    <!-- <form class="dday-container">
+        <h4>When is your big day?</h4>
+        <h4>Tell me YEAR MONTH DAY</h4>
+        <input class="dday__year"type="number" maxlength = "4" placeholder="2021" required />
+        <input class="dday__month"type="number" maxlength = "2" placeholder="12" required />
+        <input class="dday__day"type="number" maxlength = "2" placeholder="31" required />
+        <input type="submit" value="Go" />
+        <h4 class="dday__teller">sssss</h4>
+    </form> -->
     <div class="todo-container">
-        <form class="todo todo-form">
-            <input type="text" placeholder="Write a TO Do and Press Enter" required />
+        <form class="todo-form">
+            <input type="text" placeholder="Write todos & Press Enter" required />
         </form>
-        <ul class="todo todo-list"></ul>
+        <ul class="todo-list"></ul>
     </div>
     <div class="quote">
-        <span></span>
-        <span></span>
+        <div></div>
+        <div></div>
     </div>
     <div class="weather">
         <span></span>
         <span></span>
     </div>
-            <script src="js/greetings.js"></script>
+    <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
-    <!-- <script src="js/background.js"></script> -->
+    <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
+    <!-- <script src="js/dday.js"></script> -->
 
 </body>
 </html>

@@ -1,60 +1,24 @@
+@import "login-form.css";
+@import "image.css";
+@import "quote.css";
+@import "todo.css";
+@import "dday.css";
+@import url("https://fonts.googleapis.com/css2?family=Fruktur&family=Zen+Kurenaido&display=swap");
+
+body {
+  background-color: rgb(1, 1, 40);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: "Courier New", Courier, monospace;
+}
+
 .hidden {
   display: none;
 }
 
-body {
-  background-image: url("../img/222fc65ea7720f5aff83cfaff6e3567f_large.gif");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: black;
-  background-size: cover;
-  color: white;
-  font-family: "Courier New", Courier, monospace;
-}
-
-#clock {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10vh;
-  margin-bottom: 20px;
-  font-size: 48px;
-}
-
-#login-form {
-  text-align: center;
-  font-size: 24px;
-  font-weight: 700;
-}
-
-#login-form input:first-of-type {
-  border: none;
-  border-bottom: solid white 1px;
-  background: transparent;
-  width: 250px;
-  font-size: 24px;
-  color: white;
-}
-
-#login-form input:last-child {
-  border: solid white 1px;
-  background: transparent;
-  color: white;
-}
-
-.todo-container {
-  position: absolute;
-  left: 5vw;
-  top: 35vh;
-}
-
 .remove-storage {
-  margin-left: 2vw;
-}
-
-#quote {
-  display: flex;
-  justify-content: center;
+  margin-left: 20px;
 }
 
 .weather {
@@ -62,22 +26,17 @@ body {
   flex-direction: column-reverse;
   align-items: center;
   position: absolute;
-  bottom: 3vh;
-  right: 5vw;
+  top: -3vh;
+  right: 30px;
   margin-top: 50px;
   margin-bottom: 0;
 }
 
-.quote {
-  position: absolute;
-  bottom: 10vh;
-  flex-direction: column;
+.clock {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-}
-
-.greeting {
-  font-weight: 400;
-  font-size: 2em;
-  text-align: center;
+  margin-top: 5vh;
+  margin-bottom: 0;
+  font-size: 48px;
 }
