@@ -11,17 +11,17 @@ const dYear = document.querySelector(".dday__year").value;
 
 
 function getDday(event) {
-    event.preventDefault();
-    ddayContainer.classList.add(HIDDEN_CLASSNAME);
-    const dDate = new Date(`${parseInt(dYear)}, ${parseInt(dMonth)-1}, ${parseInt(dday)}`);
-    const today = new Date();
-    const distance = dDate.getTime() - today.getTime();
-    const daysLeft = Math.floor(distance / DAYTOMILSEC);
-    const hoursLeft = Math.floor(distance % DAYTOMILSEC / HOURTOMILSEC);
-    const minutesLeft = Math.floor(distance % HOURTOMILSEC / MINTOMILSEC);
-    const secondsLeft = Math.floor(distance % MINTOMILSEC / SECTOMILSEC);
+  event.preventDefault();
+  ddayContainer.classList.add(HIDDEN_CLASSNAME);
+  const dDate = new Date(`${parseInt(dYear)}, ${parseInt(dMonth)-1}, ${parseInt(dday)}`);
+  const today = new Date();
+  const distance = dDate.getTime() - today.getTime();
+  const daysLeft = Math.floor(distance / DAYTOMILSEC);
+  const hoursLeft = Math.floor(distance % DAYTOMILSEC / HOURTOMILSEC);
+  const minutesLeft = Math.floor(distance % HOURTOMILSEC / MINTOMILSEC);
+  const secondsLeft = Math.floor(distance % MINTOMILSEC / SECTOMILSEC);
 
-    ddayTeller.textContent = `IT'S JUST ${daysLeft}d ${hoursLeft}h LEFT!`;
+  ddayTeller.textContent = `IT'S JUST ${daysLeft}d ${hoursLeft}h LEFT!`;
 }
 
 
